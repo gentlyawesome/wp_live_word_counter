@@ -15,7 +15,7 @@ define( 'LIVE_WORD_COUNTER_VERSION', '0.1.0'                     );
 function live_word_counter_init() {
    add_filter( 'live_word_counter_development_mode', '__return_true' );
    add_action( 'wp_enqueue_scripts', 'live_word_counter_enqueue_scripts' );
-   add_action( 'after_body', 'live_word_counter_view' );
+   add_action( 'comment_form', 'live_word_counter_view' );
 }
 
 function live_word_counter_enqueue_scripts() {
